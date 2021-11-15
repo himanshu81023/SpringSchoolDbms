@@ -11,7 +11,21 @@ Student - Only can see their profile and have access to all common information o
 ![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/relational_erDiagram.png)
 
 
-## User InterFace:-
+## User InterFace:- 😕😕😕😕😕(not Complete)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/loginPage.png)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/staffRegistration.png)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/studentRegistration.png)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/staffProfile.png)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/studentProfile.png)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/staffList.png)
+
+![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/studentList.png)
 
 
 
