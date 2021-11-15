@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/css/addStaffs.css">
+<link rel="stylesheet" href="./css/addStaffs.css">
+<title>Document</title>
+</head>
+
+<body style="text-align: center;">
+  <div th:text="${param.error}"></div>
+  <!-- <dib th:text="${error.message}"></dib> -->
+  <h1 style="text-align:center;font-size:50px;font-weight:bolder;">Staff Entry</h1>
+  <form class="staff-form" action="/addStaff" method="post">
+    <div class="container">
+      <div>
+        <label for="jobId">Job Id</label>
+        <input type="text" name="jobId">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password">
+      </div>
+      <div>
+        <label for="Role">Role:</label>
+        <select id="id " name="role">
+          <option value="Admin">Admin</option>
+          <option value="Staff">Staff</option>
+          <option value="Student">Student</option>
+        </select>
+      </div>
+      <div>
+        <label>First Name:</label>
+        <input type="text" name="firstName">
+      </div>
+      
+      <div>
+        <label>Middle Name:</label>
+        <input type="text" name="middleName">
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input name="lastName">
+      </div>
+      <div>
+        <label>Designation</label>
+        <input name="designation">
+      </div>
+      <div>
+        <label> Course Code: </label> 
+        <input name="teaching">
+      </div>
+      <div>
+        <label>Gender</label>
+        <input name="gender">
+      </div>
+      <div>
+        <label>D.O.B</label>
+        <input name="dob" type="date">
+      </div>
+      <div>
+        <label>Email:</label>
+        <input name="email" type="email">
+      </div>
+      <div><label>Phone No.:</label>
+        <input name="phoneNo">
+      </div>
+      <div>
+        <label>LandlineNo.:</label>
+        <input name="landlineNo">
+      </div>
+      <div>
+        <label> Address:</label>
+        <input name="address">
+      </div>
+      <div>
+        <label>Pin:</label>
+        <input name="pin" type="number">
+      </div>
+      <div>
+        <label>District:</label>
+        <input name="district" type="text">
+      </div>
+      <div>
+        <label>State</label>
+        <input name="state" type="text">
+      </div>
+      <div>
+        <label>PreviousJobDetails</label>
+        <input name="previousJobDetail">
+      </div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

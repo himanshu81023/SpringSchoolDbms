@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/css/addStudent.css">
+    <link rel="stylesheet" href="/css/addStudent.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Student Registration Card</div>
+        <form action="/addStudent" method="POST">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" placeholder="Name" name="studentName" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Uid</span>
+                    <input type="text" placeholder="User Id" name="studentId" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" name="studentPassword" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">D.O.B :</span>
+                    <input type="date"  name="studentDob" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone No.</span>
+                    <input type="text" placeholder="Phone No." name="studentPhoneNo" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="email" placeholder="Email" name="studentEmail" required>
+                </div>
+
+                <div class="gender-details">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <input type="radio"  name="studentGender" value="Female">
+                          <label for="html">Female</label> 
+                          <input type="radio" id="css" name="studentGender" value="Male">
+                          <label for="css">Male</label>
+                    </div>
+                </div>
+               
+                <div class="input-box">
+                    <span class="details">Address</span>
+                    <input type="text" placeholder="Address" name="studentAddress" required>
+                </div>
+                <div>
+                    <label for="Class">Class:</label>
+                    <select id="id " name="class">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="1">4</option>
+                      <option value="2">5</option>
+                      <option value="3">6</option>
+                      <option value="3">7</option>
+                      <option value="3">8</option>
+                      <option value="3">9</option>
+                      <option value="3">10</option>
+                    </select>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+        </form>
+
+</body>
+
+</html>

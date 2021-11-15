@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css}"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <link rel="stylesheet" th:href="@{/css/staffProfile.css}">
+    <style>
+        a:hover {
+          background-color: rgba(192, 155, 155, 0.986);
+        }
+        a {
+            cursor:pointer;
+        }
+   </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div th:replace="home :: homy"></div>
+
+            <div class="row">
+                <div class="col-md-4 mt-1">
+                    <div class="card text-center sidebar">
+                        <div class="card-body">
+                            <img th:src="@{/image.jpg/}" class="rounded-circle" width="150">
+                            <div class="mt-3" style="font-weight: bold; ">
+                                <h3> <span style="color:black;" th:text="${staff.firstName}"> </span> </h3>
+                               <a th:if="${session.Role}=='Admin'" style="color:black;"  href="/addStaff">Add Staff</a>
+                               <a th:if="${session.Role}=='Admin' or ${session.Role}=='Staff'"style="color:black;"  href="/addStudent">Add Student</a>
+                               <a style="color:black;" href="/studentList">Students List</a>
+                               <a style="color:black;" href="/staffList">Staff List</a>  
+                                <a style="color:black;" href="/support">Support</a>
+                                <a style="color:black;" href="/logout">SignOut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 mt-1">
+                    <div class="card mb-3 content">
+                        <h1 class="m-3 pt-3">About</h1>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Full Name</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text="${staff.firstName}"></span> <span
+                                        th:text="${staff.middleName}"></span> <span th:text="${staff.lastName}"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>JobId:</h5>
+
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                   <span th:text="${staff.JobId}"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <h5>Password:</h5>
+
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                   <span th:text="${staff.password}"></span>
+                                </div>
+                                
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Designation:</h5>
+
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text=${staff.designation}></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Email</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text="${staff.email}"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>D.O.B </h5>
+
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                   <span th:text="${staff.dob}"></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <h5>Gender </h5>
+
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text="${staff.gender}"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>address</h5>
+
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text="${staff.address}"></span>,PIN: <span th:text="${staff.pin}"></span>,District: <span th:text="${staff.district}"></span>, State: <span th:text="${staff.state}"></span>.
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Phone</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text="${staff.phoneNo}"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Landline No.:</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                   <span th:text="${staff.phoneNo}" ></span> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 content">
+                        <h1 class="m-3">Previous Job Details</h1>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Most Recent Job:</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span th:text="${staff.previousJobDetail}"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>

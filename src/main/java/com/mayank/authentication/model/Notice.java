@@ -3,16 +3,12 @@ package com.mayank.authentication.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-// three roles  -- admin -- teachers -- student
 @Entity
-public class Role {
+public class Notice {
+
     @Id
-    private String role;
+    private String topic;
     private String description;
-    
-    public String getRole() {
-        return role;
-    }
 
     public String getDescription() {
         return description;
@@ -22,8 +18,11 @@ public class Role {
         this.description = description;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public String getTopic() {
+        return topic;
+    }
 
+    public void setTopic(String topic) {
+        this.topic = topic;
     }
 }

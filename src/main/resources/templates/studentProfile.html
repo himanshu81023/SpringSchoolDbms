@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="./css/base.css">
+  
+    <title>Student Profile</title>
+</head>
+<body>
+    <footer th:replace ="home :: homy"></footer>
+    <section>
+        <div class="card mr-3 ml-3" style="background: rgb(161, 126, 126);">
+            <div class="class-body" style="text-align: center; ">
+               <h1> Student Profile </h1> 
+            </div>
+            <div>
+                <img src="/image.jpg" alt="../static/image.jpg" style="padding-left: 40% ;padding-right:40%;clip-path: circle();">
+            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" >Attribute</th>
+                    <th scope="col">Description</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr >
+                    <th scope="row" >Name :</th>
+                    <td th:text="${student.studentName}">faf</td>
+                  </tr>
+                  <tr>
+                      <th scope="row">Class :</th>
+                      <td th:text="${student.clas.clas}"></td>
+                  </tr>
+                  <tr>
+                      <th scope="row">Roll No : </th>
+                      <td th:text="${student.studentRollNo}"></td>
+                  </tr>
+                   <tr>
+                       <th scope="row">Email:</th>
+                       <td th:text="${student.studentEmail}"></td>
+                   </tr>
+                   <tr> <th scope="row" style="padding-left:40%;"> Marks </th></tr>
+                   <tr th:each="s: ${student.score}">
+                        <th th:text="${s.courseName.courseName}" >&nbsp;:</th>
+                        <th th:text="${s.score}"> </th>
+                   </tr>
+                   <tr>
+                       <th scope="row">Date Of Birth &nbsp;&nbsp;:</th>
+                       <th th:text="${student.studentDob}"></th>
+                   </tr>
+                   <tr>
+                       <th scope="row">Phone No.:</th>
+                       <th th:text="${student.studentPhoneNo}"></th>
+                   </tr>
+                   <tr>
+                       <th scope="row">Address &nbsp; :</th>
+                       <th th:text="${student.studentAddress}"></th>
+                   </tr>
+                </tbody>
+                
+              </table>
+              
+        </div>
+    <div th:if="${session.Role!=NULL}">
+        <div th:if="${session.Role!='Student'}" style="align-content:center; padding-left: 30%; padding-top:20px;"><button type="button" class="btn btn-success">Success</button>
+            <span style="padding-left:30%;"><button type="button" class="btn btn-danger">Danger</button> </span> </td>
+        </div>
+    </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
