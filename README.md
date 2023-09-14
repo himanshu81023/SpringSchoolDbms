@@ -5,13 +5,13 @@ Staff(teacher) - can add student, only if he or she is the class teacher of the 
 Student - Only can see their profile and have access to all common information on site.
 
 ## Status(Pending)
- I Don't have completed this till now.(Still, Lot to do. :sleepy::sleepy::sleepy:)
+ (Still, Lot to do. :sleepy::sleepy::sleepy:)
 
 ## E.R.D :- 
 ![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/relational_erDiagram.png)
 
 
-## User InterFace:- 😕😕😕😕😕(not Complete)
+## User InterFace:- 
 
 ![This is an image](https://github.com/himanshu81023/SpringSchoolDbms/blob/master/loginPage.png)
 
